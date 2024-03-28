@@ -1,7 +1,27 @@
+import {Link} from 'react-router-dom'
+import homeImg from '../images/home.webp'
+import contactImg from '../images/support.webp'
+import projectImg from '../images/project-management.webp'
+import aboutIcon from '../images/information-button.webp'
+import resumeIcon from '../images/resume.webp'
+import skillsIcon from '../images/creative-thinking.webp'
+import IGlogo from '../images/instagram.webp'
+import fbLogo from '../images/facebook.webp'
+import githubLogo from '../images/github.webp'
+import gmailLogo from '../images/gmail.webp'
+import twitterLogo from '../images/twitter.webp'
+import linkedInLogo from '../images/social.webp'
+import ueabLogo from '../images/ueabLogo.webp'
+import codsoftLogo from '../images/codsoft.webp'
+import calculatorLogo from '../images/calculator.webp'
+import hotelLogo from '../images/hotel.webp'
 import profileImg from '../images/profileImg.webp'
 import wakeAndShineLogo  from '../images/wakeandShineLogo.webp'
 import tuongeeLogo from '../images/tuongee.webp'
 import todologo from '../images/todologo.png'
+import skillsgif from '../images/skillsgif.gif'
+import databaseIcon from '../images/database.webp'
+import goldenNetLogo from '../images/local-area-network.webp'
 const Home = () => {
     return ( 
         <div class="w-full font-serif">
@@ -11,25 +31,43 @@ const Home = () => {
         {/* home holder */}
         <div class="flex mt-10 w-11/12 m-auto">
         {/* aside holder */}
-            <div class="w-60 mt-10 p-1 pb-5 rounded-md fixed bg-gray-300 shadow-md shadow-blue-950">
+            <div class="w-60 mt-10 p-1 pb-10 rounded-md fixed bg-gray-300 shadow-md shadow-blue-950">
             <div>
-                <img class="rounded-full h-44 m-auto mt-3" src={profileImg} alt='profileImg'/>
-                <h2 class="text-center font-semibold text-xl text-blue-950 p-2">Wilfred Mutwiri</h2>
+                <img class="rounded-full h-32 m-auto mt-2" src={profileImg} alt='profileImg'/>
+                <h2 class="text-center font-semibold text-xl text-blue-950">Wilfred Mutwiri</h2>
                 <p class="text-center pb-1">Software Engineer</p>
             </div>
             <div class="pt-2">
                 <ul>
-                    <li class="navLi">Home</li>
+                <Link class="flex navLi">
+                <img class="h-8 " src={homeImg}/>
+                <li class="ml-5">Home</li>
+                </Link>
                     <hr class="w-44 m-auto"/>
-                    <li class="navLi">About</li>
+                <Link class="flex navLi">
+                <img class="h-8 " src={aboutIcon}/>
+                <li class="ml-5 mt-2">About</li>
+                </Link>
                     <hr class="w-44 m-auto"/>
-                    <li class="navLi">Projects</li>
+                <Link class="flex navLi">
+                <img class="h-8 " src={projectImg}/>
+                <li class="ml-5 mt-2">Projects</li>
+                </Link>
                     <hr class="w-44 m-auto"/>
-                    <li class="navLi">Skills</li>
+                <Link class="flex navLi">
+                <img class="h-8 " src={skillsIcon}/>
+                <li class="ml-5 mt-2">Skills</li>
+                </Link>
                     <hr class="w-44 m-auto"/>
-                    <li class="navLi">Resume</li>
+                <Link class="flex navLi">
+                <img class="h-8 " src={resumeIcon}/>
+                <li class="ml-5 mt-2">Resume</li>
+                </Link>
                     <hr class="w-44 m-auto"/>
-                    <li class="navLi">Contact</li>
+                <Link class="flex navLi">
+                <img class="h-8" src={contactImg}/>
+                <li class="ml-5 mt-2">Contacts</li>
+                </Link>
                     <hr class="w-44 m-auto"/>
                 </ul>
             </div>
@@ -52,9 +90,10 @@ const Home = () => {
             <div class="bg-gray-300 p-4 rounded-md shadow-sm shadow-blue-950 mt-5">
             <h2 class="text-xl font-semibold text-blue-950">My Skills<span class="bg-blue-900 text-white font-bold rounded-md ml-1 pl-3 pr-3 pt-1 pb-1">$</span></h2>
             <div>
-            <h2>Logo</h2>
             <div class="flex">
-            <div class="flex rounded-md shadow-sm shadow-blue-950 p-6 mt-3 bg-gray-100">
+            <div class="rounded-md shadow-sm shadow-blue-950 p-5 mt-3 bg-gray-100">
+            <img class="h-14 rounded-full -ml-5" src={skillsgif} alt="skillsgif"/>
+            <div class="flex">
             <ul class="p-2 mr-2">
                 <li>JavaScript</li>
                 <li>React</li>
@@ -74,7 +113,9 @@ const Home = () => {
                 <li>JS6+</li>
             </ul>
             </div>
+            </div>
             <div class="bg-gray-100 ml-5 rounded-md shadow-sm shadow-blue-950 p-10 mt-3">
+            <img class="h-8 -ml-4 mb-2" src={databaseIcon} alt="databaseIcon"/>
                 <ul>
                     <li>MongoDB</li>
                     <li>MySQL</li>
@@ -98,7 +139,7 @@ const Home = () => {
                 <p>Complete website for Wake and Shine (SHG).<br/>
                 Skills incorporated during project development: Problem Solving, Communication, and Critical Reasoning.<br/>
                 Tools used:<span class="text-blue-950">JavaScript, Tailwindcss, HTML, Git/Github</span><br/>
-                To view project,<a class="text-red-500" href='#'>Click here</a></p>
+                To view project,<a class="text-red-500 hover:text-blue-800" href='https://wakeandshineshg.netlify.app/' target='_blank'>Click here</a></p>
             </div>
             <div class="mt-5 ml-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
             <div class="flex">
@@ -108,14 +149,14 @@ const Home = () => {
             <hr class="bg-blue-950 h-[2px] w-64 m-auto mt-2 mb-2"/>
             <p>Complete website for Tuongee Initiative group.<br/>
                 Skills incorporated during project development: Problem Solving, Communication, and Critical Reasoning.<br/>
-                Tools used:<br/><span class="text-blue-950">React, MongoDB, ExpressJS,NodeJS,JavaScript, Tailwindcss,Git/Github</span><br/>
-                To view project,<a class="text-red-500" href='#'>Click here</a>
+                Tools used: <span class="text-blue-950">React, MongoDB, ExpressJS,NodeJS,JavaScript, Tailwindcss,Git/Github</span><br/>
+                To view project,<a class="text-red-500 hover:text-blue-800" href='https://tuongee.vercel.app/' target='_blank'>Click here</a>
             </p>
             </div>
             </div>
             {/* projects grid 2 */}
             <div class="grid grid-cols-2">
-            <div class="mt-5 ml-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
             <div class="flex">
                 <img class="h-14" src={todologo} alt='todoLogo'/>
                 <h2 class="text-lg pt-5 pl-4 text-orange-500">ToDo App</h2>
@@ -124,15 +165,173 @@ const Home = () => {
             <p>Todo app with user Authentication.<br/>
                 Skills incorporated during project development: Problem Solving, and Critical Reasoning.<br/>
                 Tools used:<br/> <span class="text-blue-950">React, MongoDB, ExpressJS,NodeJS,JavaScript, Tailwindcss,Git/Github</span><br/>
-                To view project,<a class="text-red-500" href='#'>Click here</a>
+                To view project,<a class="text-red-500 hover:text-blue-800" href="https://todo-app-ashen-tau.vercel.app/Landing" target='_blank'>Click here</a>
             </p>
             </div>
-            <div></div>
+            <div class="mt-5 ml-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class="flex">
+                <img class="h-14" src={goldenNetLogo} alt='goldenNetLogo'/>
+                <h2 class="text-lg pt-5 pl-4 text-orange-500">Golden Networks</h2>
+            </div>
+            <hr class="bg-blue-950 h-[2px] w-64 m-auto mt-2 mb-2"/>
+            <p>Golden Networks Organisation Website<br/>
+                Skills incorporated during project development:Communication, Problem Solving, and Critical Reasoning.<br/>
+                Tools used:<br/> <span class="text-blue-950">JavaScript,HTML,CSS,Tailwindcss,Git/Github</span><br/>
+                To view project,<a class="text-red-500 hover:text-blue-800" href="https://wilfredmutwiri.github.io/Golden-Networks/" target='_blank'>Click here</a>
+            </p>
+            </div>
             </div>
             {/* projects grid 3 */}
             <div class="grid grid-cols-2">
-            <div></div>
-            <div></div>
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class="flex">
+                <img class="h-14" src={hotelLogo} alt='hotelLogo'/>
+                <h2 class="text-lg pt-5 pl-4 text-orange-500">DianiStar Hotel</h2>
+            </div>
+            <hr class="bg-blue-950 h-[2px] w-64 m-auto mt-2 mb-2"/>
+            <p>Diani_Star Hotel Website<br/>
+                Skills incorporated during project development:Problem Solving, and Critical Reasoning.<br/>
+                Tools used:<br/> <span class="text-blue-950">JavaScript,HTML,CSS,Tailwindcss,Git/Github</span><br/>
+                To view project,<a class="text-red-500 hover:text-blue-800" href="https://wilfredmutwiri.github.io/DianiStar-Hotel_Tailwindcss/" target='_blank'>Click here</a>
+            </p>
+            </div>
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class="flex">
+                <img class="h-14" src={calculatorLogo} alt='hotelLogo'/>
+                <h2 class="text-lg pt-5 pl-4 text-orange-500">Classic Calculator</h2>
+            </div>
+            <hr class="bg-blue-950 h-[2px] w-64 m-auto mt-2 mb-2"/>
+            <p>Classic Calculator<br/>
+                Skills incorporated during project development:Problem Solving, and Critical Reasoning.<br/>
+                Tools used:<br/> <span class="text-blue-950">JavaScript,HTML,CSS,Tailwindcss,Git/Github</span><br/>
+                To view project,<a class="text-red-500 hover:text-blue-800" href="https://wilfredmutwiri.github.io/Classic-calculator/" target='_blank'>Click here</a>
+            </p>
+            </div>
+            </div>
+            </div>
+        </section>
+        {/* resume section */}
+        <section>
+            <div class="bg-gray-300 p-4 rounded-md shadow-sm shadow-blue-950 mt-5">
+            <h2 class="text-xl font-semibold text-blue-950">Resum<span class="bg-blue-900 text-white font-bold rounded-md ml-1 pl-3 pr-3 pt-1 pb-1">e</span></h2>
+            <h3>Experience</h3>
+            {/* first experience */}
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class="flex">
+            <img class="h-16 rounded-full" src={tuongeeLogo} alt='tuongeeLogo'/>
+            <h2 class="text-lg pt-5 pl-4 text-orange-500">Tuongee Initiative<span class="font-light text-gray-600 text-sm">-Web Developer</span></h2>
+            </div>
+            <div class="flex justify-between pt-4 pb-4">
+                <h2>Tharaka South, Tharaka-Nithi, Kenya</h2>
+                <h3>January 2024 - current</h3>
+            </div>
+            <p class="p-3 leading-relaxed">
+            I build a complete website/web application for the organisation.Technologies used
+            are React,Javascript,NodeJS,ExpressJS,MongoDb,Github,Tailwindcss,.I also demonstrate/present the
+            project to Project Manager.
+            </p>
+            </div>
+            {/* second experience */}
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class="flex">
+            <img class="h-16 rounded-full" src={wakeAndShineLogo} alt='wakeAndShineLogo'/>
+            <h2 class="text-lg pt-5 pl-4 text-orange-500">Wake and Shine SHG <span class="font-light text-gray-600 text-sm">-Web Developer</span></h2>
+            </div>
+            <div class="flex justify-between pt-4 pb-4">
+                <h2>Tharaka South, Tharaka-Nithi, Kenya</h2>
+                <h3>April 2023 - August 2023</h3>
+            </div>
+            <p class="p-3 leading-relaxed">
+            I build a complete website for the organisation.Technologies used
+            are Github, Javascript, Tailwindcss,HTML.I also demonstrate/present the
+            project to Project Manager.
+            </p>
+            </div>
+            {/* third experience */}
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class="flex">
+            <img class="h-16 rounded-full" src={codsoftLogo} alt='codesoftLogo'/>
+            <h2 class="text-lg pt-5 pl-4 text-orange-500">Codesoft<span class="font-light text-gray-600 text-sm">-Web Development Intern</span></h2>
+            </div>
+            <div class="flex justify-between pt-4 pb-4">
+                <h2>Remote</h2>
+                <h3>November 2023 - December 2023</h3>
+            </div>
+            <p class="p-3 leading-relaxed">
+            Was given a task to develope 3 projects and submit them to the internship management.Technologies used
+            are Github, Javascript, Tailwindcss,HTML.
+            </p>
+            </div>
+            </div>
+        </section>
+        {/* education section */}
+        <section>
+            <div class="bg-gray-300 p-4 rounded-md shadow-sm shadow-blue-950 mt-5">
+            <div>
+                <h2>Education</h2>
+                {/* first education */}
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class="flex">
+            <img class="h-16 rounded-full" src={ueabLogo} alt='ueabLogo'/>
+            <h2 class="text-lg pt-5 pl-4 text-orange-500">Bachelor of Science<span class="font-light text-gray-600 text-sm">-Software Developement</span></h2>
+            </div>
+            <div class="flex justify-between pt-4 pb-4">
+                <h2>Baraton, Nandi County, Kenya</h2>
+                <h3>August 2020 - current</h3>
+            </div>
+            <p class="p-3 leading-relaxed">
+            | Software Enginnering|Data Structure and Algorithms | Web Design| Web Development |
+            Mobile Programming | Artificial Intelligence | ICT Project Management|Cloud Computing|
+            Object Oriented Programming|Database Management
+            |Installation and Customization| Awaiting Graduation on August 2025
+            </p>
+            </div>
+            </div>
+            </div>
+        </section>
+        {/* get in touch section */}
+        <section>
+            <div class="bg-gray-300 p-4 rounded-md shadow-sm shadow-blue-950 mt-5">
+            <h2 class="text-xl font-semibold text-blue-950">Get in touch<span class="bg-blue-900 text-white font-bold rounded-md ml-1 pl-3 pr-3 pt-1 pb-1">!</span></h2>
+            <div class="flex">
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <h2 class="text-center text-lg font-bold p-4 text-blue-800">Contact Info</h2>
+            <ul class="p-4">
+                <li class="flex">
+               <img class="h-5 mr-2" src={gmailLogo} alt="gmailLogo"/>
+                wilfredmutwiri20@gmail.com 
+                </li>
+                <li class="flex mt-2 mb-2">
+                <img class="h-5 mr-2" src={fbLogo} alt="fbLogo"/>
+                Facebook:
+                <a class="text-blue-800" href="https://www.facebook.com/willy.james.33821">Wilfred Mutwiri </a>
+                </li>
+                <li class="flex mb-2">
+                <img class="h-5 mr-2" src={githubLogo} alt="gmailLogo"/>
+                Github: 
+                <a class="text-blue-800" href="https://github.com/WilfredMutwiri">WilfredMutwiri</a>
+                </li>
+                <li class="flex mb-2">
+                <img class="h-5 mr-2" src={linkedInLogo} alt="linkedinLogo"/>
+                LinkedIn:
+                <a class="text-blue-800" href="https://www.linkedin.com/in/wilfred-mutwiri-ba3bb8236/">Wilfred Mutwiri</a>
+                </li>
+                <li class="flex">
+                <img class="w-5 mr-2" src={twitterLogo} alt="gmailLogo"/>
+                Twitter: 
+                <a class="text-blue-800" href="https://twitter.com/WilfredMutwiri8">@WilfredMutwiri8</a>
+                </li>
+            </ul>
+            </div>
+            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <h2 class="text-center text-lg font-bold p-4 text-blue-800">Send me a message:</h2>
+            <form>
+                <input type="text" class="w-11/12 p-2 rounded-md bg-gray-300 mb-4" placeholder="Your Name" /><br/>
+                <input type="text" class="w-11/12 p-2 rounded-md bg-gray-300 mb-4" placeholder="Your Email" /><br/>
+                <textarea class="w-11/12 p-2 rounded-md bg-gray-300 mb-4" placeholder="Hello Wilfred..." cols="30" rows="10"></textarea><br/>
+                <button class="w-11/12 mb-4 text-white shadow-sm shadow-black font-semibold bg-gradient-to-r from-blue-800 to-orange-500 p-2 rounded-md">Submit</button>
+            </form>
+            </div>
             </div>
             </div>
         </section>
