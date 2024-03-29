@@ -51,10 +51,10 @@ const Home = () => {
     return ( 
         <div class="w-full font-serif overflow-clip scroll-smooth" id='Home'>
         <nav class="bg-gray-200 p-3 shadow-sm shadow-blue-950 fixed w-screen -mt-10">
-        <svg ref={openeAsideRef} onMouseEnter={handleOpenMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" block md:hidden w-7 h-7">
+        <svg ref={openeAsideRef} onClick={handleOpenMenu} onMouseEnter={handleOpenMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" block md:hidden w-7 h-7">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
-        <svg ref={closeAsideRef} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 text-orange-500 hidden">
+        <svg ref={closeAsideRef} onClick={handleCloseMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 text-orange-500 hidden">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
         <h2 class="-mt-7 md:-mt-0 text-center text-xl md:text-2xl text-blue-950 font-semibold">Wilfred_Mutwiri()<span class="bg-blue-900 text-white font-bold rounded-md ml-1 pl-3 pr-3 pt-1 pb-1">;</span></h2>
