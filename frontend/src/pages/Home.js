@@ -23,24 +23,38 @@ import todologo from '../images/todologo.png'
 import skillsgif from '../images/skillsgif.gif'
 import databaseIcon from '../images/database.webp'
 import goldenNetLogo from '../images/local-area-network.webp'
-import { useState} from 'react'
+import { useState,useRef,useEffect} from 'react'
 const Home = () => {
-    const [isAsideOpen,setIsAsideOpen]=useState(false)
+    const asideRef=useRef(null)
+    const openeAsideRef=useRef(null)
+    const closeAsideRef=useRef(null)
     const handleOpenMenu=()=>{
-        setIsAsideOpen(true)
-        console.log("open clicked");
+        if(asideRef.current && openeAsideRef.current){
+            asideRef.current.style.display="block"
+            closeAsideRef.current.style.display="block"
+            openeAsideRef.current.style.display="none"
+        }
     }
     const handleCloseMenu=()=>{
-        setIsAsideOpen(false)
-        console.log("close clicked");
+        if(asideRef.current && closeAsideRef.current){
+            asideRef.current.style.display="none"
+            closeAsideRef.current.style.display="none"
+            openeAsideRef.current.style.display="block"
+        }
+
     }
+    useEffect(()=>{
+        const aside=asideRef.current
+        const openeAside=openeAsideRef.current
+        const closeAside=closeAsideRef.current
+    },[])
     return ( 
         <div class="w-full font-serif overflow-clip scroll-smooth" id='Home'>
         <nav class="bg-gray-200 p-3 shadow-sm shadow-blue-950 fixed w-screen -mt-10">
-        <svg  onClick={handleOpenMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={` ${isAsideOpen ? 'hidden' : 'block'} block md:hidden w-7 h-7`}>
+        <svg ref={openeAsideRef} onMouseEnter={handleOpenMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" block md:hidden w-7 h-7">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
-        <svg onClick={handleCloseMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`${isAsideOpen ? 'block' : 'hidden'} h-8 text-orange-500`}>
+        <svg ref={closeAsideRef} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 text-orange-500 hidden">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
         <h2 class="-mt-7 md:-mt-0 text-center text-xl md:text-2xl text-blue-950 font-semibold">Wilfred_Mutwiri()<span class="bg-blue-900 text-white font-bold rounded-md ml-1 pl-3 pr-3 pt-1 pb-1">;</span></h2>
@@ -48,7 +62,7 @@ const Home = () => {
         {/* home holder */}
         <div class="flex mt-10 w-11/12 m-auto">
         {/* aside holder */}
-            <div class={`${isAsideOpen ? 'block' : 'hidden'} w-60 -ml-4 h-screen md:h-auto md:-ml-0 mt-4 md:mt-10 p-1 pb-10 rounded-none md:rounded-md fixed bg-gray-300 shadow-md shadow-blue-950`}>
+            <div ref={asideRef} onMouseLeave={handleCloseMenu}  class=" hidden md:block w-60 -ml-4 h-screen md:h-auto md:-ml-0 mt-4 md:mt-10 p-1 pb-10 rounded-none md:rounded-md fixed bg-gray-300 shadow-md shadow-blue-950">
             <div>
                 <img class="rounded-full h-32 m-auto mt-2" src={profileImg} alt='profileImg'/>
                 <h2 class="text-center font-semibold text-xl text-blue-950">Wilfred Mutwiri</h2>
