@@ -62,7 +62,7 @@ const Home = () => {
         {/* home holder */}
         <div class="flex mt-10 w-11/12 m-auto">
         {/* aside holder */}
-            <div ref={asideRef} onMouseLeave={handleCloseMenu}  class=" hidden md:block w-60 -ml-4 h-screen md:h-auto md:-ml-0 mt-4 md:mt-10 p-1 pb-10 rounded-none md:rounded-md fixed bg-gray-300 shadow-md shadow-blue-950">
+            <div ref={asideRef} class=" hidden md:block w-60 -ml-4 h-screen md:h-auto md:-ml-0 mt-4 md:mt-10 p-1 pb-10 rounded-none md:rounded-md fixed bg-gray-300 shadow-md shadow-blue-950">
             <div>
                 <img class="rounded-full h-32 m-auto mt-2" src={profileImg} alt='profileImg'/>
                 <h2 class="text-center font-semibold text-xl text-blue-950">Wilfred Mutwiri</h2>
