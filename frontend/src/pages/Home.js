@@ -23,7 +23,7 @@ import todologo from '../images/todologo.png'
 import skillsgif from '../images/skillsgif.gif'
 import databaseIcon from '../images/database.webp'
 import goldenNetLogo from '../images/local-area-network.webp'
-import { useState,useMemo} from 'react'
+import { useState} from 'react'
 const Home = () => {
     const [isAsideOpen,setIsAsideOpen]=useState(false)
     const handleOpenMenu=()=>{
@@ -34,9 +34,6 @@ const Home = () => {
         setIsAsideOpen(false)
         console.log("close clicked");
     }
-    const asideClass = useMemo(() => {
-        return isAsideOpen ? 'block' : 'hidden';
-    }, [isAsideOpen]);
     return ( 
         <div class="w-full font-serif overflow-clip scroll-smooth" id='Home'>
         <nav class="bg-gray-200 p-3 shadow-sm shadow-blue-950 fixed w-screen -mt-10">
@@ -51,7 +48,7 @@ const Home = () => {
         {/* home holder */}
         <div class="flex mt-10 w-11/12 m-auto">
         {/* aside holder */}
-            <div class={`${asideClass} w-60 -ml-4 h-screen md:h-auto md:-ml-0 mt-4 md:mt-10 p-1 pb-10 rounded-none md:rounded-md fixed bg-gray-300 shadow-md shadow-blue-950`}>
+            <div class={`${isAsideOpen ? 'block' : 'hidden'} w-60 -ml-4 h-screen md:h-auto md:-ml-0 mt-4 md:mt-10 p-1 pb-10 rounded-none md:rounded-md fixed bg-gray-300 shadow-md shadow-blue-950`}>
             <div>
                 <img class="rounded-full h-32 m-auto mt-2" src={profileImg} alt='profileImg'/>
                 <h2 class="text-center font-semibold text-xl text-blue-950">Wilfred Mutwiri</h2>
