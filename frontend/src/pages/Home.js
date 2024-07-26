@@ -6,7 +6,6 @@ import projectImg from '../images/project-management.webp'
 import aboutIcon from '../images/information-button.webp'
 import resumeIcon from '../images/resume.webp'
 import skillsIcon from '../images/creative-thinking.webp'
-import IGlogo from '../images/instagram.webp'
 import fbLogo from '../images/facebook.webp'
 import githubLogo from '../images/github.webp'
 import gmailLogo from '../images/gmail.webp'
@@ -14,16 +13,18 @@ import twitterLogo from '../images/twitter.webp'
 import linkedInLogo from '../images/social.webp'
 import ueabLogo from '../images/ueabLogo.webp'
 import codsoftLogo from '../images/codsoft.webp'
-import calculatorLogo from '../images/calculator.webp'
-import hotelLogo from '../images/hotel.webp'
 import profileImg from '../images/profileImg.webp'
 import wakeAndShineLogo  from '../images/wakeandShineLogo.webp'
 import tuongeeLogo from '../images/tuongee.webp'
 import todologo from '../images/todologo.png'
 import skillsgif from '../images/skillsgif.gif'
 import databaseIcon from '../images/database.webp'
-import goldenNetLogo from '../images/local-area-network.webp'
-import { useState,useRef,useEffect} from 'react'
+import { useRef,useEffect} from 'react'
+
+import mzeduLogoImg from '../images/R.jpeg'
+import NusaLogo from '../images/NusaLogo.webp'
+import jabanaLogo from '../images/JabanaLogo.png'
+import vabriseLogo from '../images/vabriseTech logo.jpeg'
 const Home = () => {
     const asideRef=useRef(null)
     const openeAsideRef=useRef(null)
@@ -110,9 +111,9 @@ const Home = () => {
             <div class="bg-gray-300 p-4 rounded-md shadow-sm shadow-blue-950">
                 <h2 class="text-lg md:text-xl font-semibold text-blue-950">Who am i<span class="bg-blue-900 text-white font-bold rounded-md ml-1 pl-3 pr-3 pt-1 pb-1">?</span></h2>
                 <p class="leading-relaxed pt-2">
-                I am currently a software engineering student at the University Of Eastern Africa, Baraton.
+                I am currently a final year software engineering student at the University Of Eastern Africa, Baraton.
                 I am a determined fullstack web developer using the MERN Stack. I have worked on many contract
-                tasks, most entailing the use of frontend frameworks such as React.js, Tailwindcss and JS6+.
+                tasks as well as collaboration projects, most entailing the use of frontend frameworks such as React.js, Tailwindcss,flowbite and JS6+.
                 </p>
             </div>
         </section>
@@ -143,6 +144,9 @@ const Home = () => {
                 <li>SCSS</li>
                 <li>JS6+</li>
             </ul>
+            <ul class="p-2 ml-0 md:ml-2">
+                <li>Flowbite</li>
+            </ul>
             </div>
             </div>
             <div class="bg-gray-100 ml-0 md:ml-5 rounded-md shadow-sm shadow-blue-950 p-10 mt-3">
@@ -160,19 +164,50 @@ const Home = () => {
         <section id='projects'>
             <div  class="bg-gray-300 p-4 rounded-md shadow-sm shadow-blue-950 mt-5">
             <h2 class="text-lg md:text-xl font-semibold text-blue-950">Project<span class="bg-blue-900 text-white font-bold rounded-md ml-1 pl-3 pr-3 pt-1 pb-1">s</span></h2>
+            {/* first project grid */}
             <div class="block md:grid grid-cols-2">
+                {/* first project */}
             <div class="mt-5 mr-0 md:mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
                 <div class="flex">
-                    <img class="h-16 rounded-full" src={wakeAndShineLogo} alt='wakeAndShineLogo'/>
-                    <h2 class="text-lg pt-5 pl-4 text-orange-500">Wake and Shine SHG</h2>
+                    <img class="h-16 rounded-full" src={mzeduLogoImg} alt='wakeAndShineLogo'/>
+                    <h2 class="text-lg pt-5 pl-4 text-orange-500">Mzedu furniture & Decorations</h2>
                 </div>
                 <hr class="bg-blue-950 h-[2px] w-10/12 md:w-64 m-auto mt-2 mb-2"/>
-                <p>Complete website for Wake and Shine (SHG).<br/>
+                <p>Complete website for displaying and selling products by Mzedu furniture and decorations.<br/>
                 Skills incorporated during project development: Problem Solving, Communication, and Critical Reasoning.<br/>
-                Tools used:<span class="text-blue-950">JavaScript, Tailwindcss, HTML,Git/Github</span><br/>
-                To view project,<a class="text-red-500 hover:text-blue-800" href='https://wakeandshineshg.netlify.app/' target='_blank'>Click here</a></p>
+                Tools used:<span class="text-blue-950">React.js,Tailwindcss,Flowbite,Git/Github</span><br/>
+                To view project,<a class="text-red-500 hover:text-blue-800" href='https://mzedu-furnitures.vercel.app/' target='_blank'>Click here</a></p>
             </div>
+            {/* second project */}
             <div class="mt-5 ml-0 md:ml-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+                <div class="flex">
+                    <img class="h-16 rounded-full" src={jabanaLogo} alt='wakeAndShineLogo'/>
+                    <h2 class="text-lg pt-5 pl-4 text-orange-500">Jabana</h2>
+                </div>
+                <hr class="bg-blue-950 h-[2px] w-10/12 md:w-64 m-auto mt-2 mb-2"/>
+                <p>A school communication management system.<br/>
+                Skills incorporated during project development: Problem Solving, Communication, and Critical Reasoning.<br/>
+                Tools used:<span class="text-blue-950">React, Tailwindcss,Flowbite,Node.js,MongoDB,Git/Github</span><br/>
+                To view project,<a class="text-red-500 hover:text-blue-800" href='http://jabana.vercel.app/' target='_blank'>Click here</a></p>
+            </div>
+            </div>
+            {/* projects grid 2 */}
+            <div class="block md:grid grid-cols-2">
+                {/* third project */}
+                <div class="mt-5 mr-0 md:mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+                <div class="flex">
+                <img class="h-16 rounded-full" src={NusaLogo} alt='tuongeeLogo'/>
+                <h2 class="text-lg pt-5 pl-4 text-orange-500">Nyakach University Student Association</h2>
+                </div>
+                <hr class="bg-blue-950 h-[2px] w-10/12 md:w-64 m-auto mt-2 mb-2"/>
+            <p>Complete website for Nyakach University Student Association (NUSA).<br/>
+                Skills incorporated during project development: Problem Solving, Communication, and Critical Reasoning.<br/>
+                Tools used: <span class="text-blue-950">React, MongoDB, ExpressJS,NodeJS,JavaScript, Tailwindcss,Flowbite,Git/Github</span><br/>
+                To view project,<a class="text-red-500 hover:text-blue-800" href='https://nyakachuniversity-studentsassociation.vercel.app/' target='_blank'>Click here</a>
+            </p>
+            </div>
+            {/* fourth project */}
+                <div class="mt-5 ml-0 md:ml-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
             <div class="flex">
                 <img class="h-16 rounded-full" src={tuongeeLogo} alt='tuongeeLogo'/>
                 <h2 class="text-lg pt-5 pl-4 text-orange-500">Tuongee Initiative</h2>
@@ -185,9 +220,10 @@ const Home = () => {
             </p>
             </div>
             </div>
-            {/* projects grid 2 */}
+            {/* projects grid 3 */}
             <div class="block md:grid grid-cols-2">
-            <div class="mt-5 mr-0 md:mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+                {/* fifth project */}
+                <div class="mt-5 mr-0 md:mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
             <div class="flex">
                 <img class="h-14" src={todologo} alt='todoLogo'/>
                 <h2 class="text-lg pt-5 pl-4 text-orange-500">ToDo App</h2>
@@ -199,50 +235,20 @@ const Home = () => {
                 To view project,<a class="text-red-500 hover:text-blue-800" href="https://todo-app-ashen-tau.vercel.app/Landing" target='_blank'>Click here</a>
             </p>
             </div>
+            {/* sixth project */}
             <div class="mt-5 ml-0 md:ml-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
-            <div class="flex">
-                <img class="h-14" src={goldenNetLogo} alt='goldenNetLogo'/>
-                <h2 class="text-lg pt-5 pl-4 text-orange-500">Golden Networks</h2>
-            </div>
-            <hr class="bg-blue-950 h-[2px] w-10/12 md:w-64 m-auto mt-2 mb-2"/>
-            <p>
-                Golden Networks Organisation Website<br/>
-                Skills incorporated during project development:Communication, Problem Solving, and Critical Reasoning.<br/>
-                Tools used:<br/><span class="text-blue-950">JavaScript,HTML,Tailwindcss,
-                Git/Github</span><br/>
-                To view project,<a class="text-red-500 hover:text-blue-800" href="https://wilfredmutwiri.github.io/Golden-Networks/" target='_blank'>Click here</a>
-            </p>
+                <div class="flex">
+                    <img class="h-16 rounded-full" src={wakeAndShineLogo} alt='wakeAndShineLogo'/>
+                    <h2 class="text-lg pt-5 pl-4 text-orange-500">Wake and Shine SHG</h2>
+                </div>
+                <hr class="bg-blue-950 h-[2px] w-10/12 md:w-64 m-auto mt-2 mb-2"/>
+                <p>Complete website for Wake and Shine (SHG).<br/>
+                Skills incorporated during project development: Problem Solving, Communication, and Critical Reasoning.<br/>
+                Tools used:<span class="text-blue-950">JavaScript, Tailwindcss, HTML,Git/Github</span><br/>
+                To view project,<a class="text-red-500 hover:text-blue-800" href='https://wakeandshineshg.netlify.app/' target='_blank'>Click here</a></p>
             </div>
             </div>
-            {/* projects grid 3 */}
-            <div class="block md:grid grid-cols-2">
-            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
-            <div class="flex">
-                <img class="h-14" src={hotelLogo} alt='hotelLogo'/>
-                <h2 class="text-lg pt-5 pl-4 text-orange-500">DianiStar Hotel</h2>
-            </div>
-            <hr class="bg-blue-950 h-[2px] w-10/12 md:w-64 m-auto mt-2 mb-2"/>
-            <p>Diani_Star Hotel Website<br/>
-                Skills incorporated during project development:Problem Solving, and Critical Reasoning.<br/>
-                Tools used:<br/> <span class="text-blue-950">JavaScript,HTML,CSS,Tailwindcss,
-                Git/Github</span><br/>
-                To view project,<a class="text-red-500 hover:text-blue-800" href="https://wilfredmutwiri.github.io/DianiStar-Hotel_Tailwindcss/" target='_blank'>Click here</a>
-            </p>
-            </div>
-            <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
-            <div class="flex">
-                <img class="h-14" src={calculatorLogo} alt='hotelLogo'/>
-                <h2 class="text-lg pt-5 pl-4 text-orange-500">Classic Calculator</h2>
-            </div>
-            <hr class="bg-blue-950 h-[2px] w-10/12 md:w-64 m-auto mt-2 mb-2"/>
-            <p>Classic Calculator<br/>
-                Skills incorporated during project development:Problem Solving, and Critical Reasoning.<br/>
-                Tools used:<br/> <span class="text-blue-950">JavaScript,HTML,CSS,Tailwindcss,
-                Git/Github</span><br/>
-                To view project,<a class="text-red-500 hover:text-blue-800" href="https://wilfredmutwiri.github.io/Classic-calculator/" target='_blank'>Click here</a>
-            </p>
-            </div>
-            </div>
+            <h2 className='p-3'>for these and more projects, Kindly visit my <a className='text-blue-600 hover:text-red-600' href='https://github.com/WilfredMutwiri' target='_blank'>Github Profile</a></h2>
             </div>
         </section>
         {/* resume section */}
@@ -253,12 +259,29 @@ const Home = () => {
             {/* first experience */}
             <div class="mt-5  mr-0 md:mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
             <div class=" block md:flex">
+            <img class="h-16 rounded-full" src={vabriseLogo} alt='tuongeeLogo'/>
+            <h2 class="text-lg pt-5 pl-0 md:pl-4 text-orange-500">Vabrise Technologies<span class="font-light text-gray-600 text-sm">-Web Development Intern</span></h2>
+            </div>
+            <div class=" block md:flex justify-between pt-4 pb-4">
+                <h2>Remote, Kenya</h2>
+                <h3 class="pt-2 md:pt-0">July 2024 - current</h3>
+            </div>
+            <p class=" p-2 md:p-3 leading-relaxed">
+            Collaboration in bulding an e-commerce application for the organisation.Technologies used
+            are React,Javascript,NodeJS,ExpressJS,
+            MongoDb,Github,Tailwindcss,.I also demonstrate/present the
+            project to Project Manager and my supervisor.
+            </p>
+            </div>
+            {/* second experience */}
+            <div class="mt-5  mr-0 md:mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
+            <div class=" block md:flex">
             <img class="h-16 rounded-full" src={tuongeeLogo} alt='tuongeeLogo'/>
             <h2 class="text-lg pt-5 pl-0 md:pl-4 text-orange-500">Tuongee Initiative<span class="font-light text-gray-600 text-sm">-Web Developer</span></h2>
             </div>
             <div class=" block md:flex justify-between pt-4 pb-4">
                 <h2>Tharaka South, Tharaka-Nithi, Kenya</h2>
-                <h3 class="pt-2 md:pt-0">January 2024 - current</h3>
+                <h3 class="pt-2 md:pt-0">January 2024 - May 2024</h3>
             </div>
             <p class=" p-2 md:p-3 leading-relaxed">
             I built a complete website/web application for the organisation.Technologies used
@@ -267,7 +290,7 @@ const Home = () => {
             project to Project Manager.
             </p>
             </div>
-            {/* second experience */}
+            {/* third experience */}
             <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
             <div class="block md:flex">
             <img class="h-16 rounded-full" src={wakeAndShineLogo} alt='wakeAndShineLogo'/>
@@ -283,7 +306,7 @@ const Home = () => {
             project to Project Manager.
             </p>
             </div>
-            {/* third experience */}
+            {/* fourth experience */}
             <div class="mt-5 mr-3 bg-gray-100 rounded-md shadow-sm shadow-blue-950 p-3">
             <div class="block md:flex">
             <img class="h-16 rounded-full" src={codsoftLogo} alt='codesoftLogo'/>
