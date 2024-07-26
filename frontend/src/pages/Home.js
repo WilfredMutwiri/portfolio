@@ -187,7 +187,8 @@ const Home = () => {
                 <hr class="bg-blue-950 h-[2px] w-10/12 md:w-64 m-auto mt-2 mb-2"/>
                 <p>A school communication management system.<br/>
                 Skills incorporated during project development: Problem Solving, Communication, and Critical Reasoning.<br/>
-                Tools used:<span class="text-blue-950">React, Tailwindcss,Flowbite,Node.js,MongoDB,Git/Github</span><br/>
+                Tools used:<span class="text-blue-950">React, Tailwindcss,Flowbite,Node.js,
+                MongoDB,Git/Github</span><br/>
                 To view project,<a class="text-red-500 hover:text-blue-800" href='http://jabana.vercel.app/' target='_blank'>Click here</a></p>
             </div>
             </div>
