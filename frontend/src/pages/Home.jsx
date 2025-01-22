@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button} from 'flowbite-react';
 import {Link} from 'react-router-dom'
-import Projects from './projects';
-import Resume from './resume';
+import Projects from './Projects';
+import Resume from './Resume';
 import Contacts from './Contacts';
 import menuIcon from '../assets/menu.webp'
 import homeImg from '../assets/home.webp'
