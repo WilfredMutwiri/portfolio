@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navLi{
+    @apply text-center p-2 cursor-pointer hover:text-orange-500 hover:bg-gray-100 rounded-md hover:border border-orange-100
+}
